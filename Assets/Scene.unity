@@ -323,11 +323,6 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 5099268, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
   m_PrefabInstance: {fileID: 341433136}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &174693719 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 491758, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
-  m_PrefabInstance: {fileID: 341433136}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &242819171 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 473078, guid: 988fc297a71d24254ba0a364fda65476, type: 3}
@@ -481,13 +476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 491758, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1910724707}
-    - targetCorrespondingSourceObject: {fileID: 491758, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1755344538}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 158752, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
       insertIndex: -1
@@ -551,7 +540,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 365394938}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -924,6 +913,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92647be45f04343bf9aebf433599ff6b, type: 3}
+--- !u!1 &568540171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 568540172}
+  m_Layer: 0
+  m_Name: MonkeyShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &568540172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568540171}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.8200002, y: 0.7500001, z: 445.74}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1755344553}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &593190542
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,7 +956,7 @@ GameObject:
   m_Layer: 0
   m_Name: CrocodileShootPoint
   m_TagString: Untagged
-  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1118,6 +1138,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 365394938}
     m_Modifications:
+    - target: {fileID: 126862, guid: 9c82cefa3535e4633908fc0185c960ed, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 463676, guid: 9c82cefa3535e4633908fc0185c960ed, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1261,6 +1285,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 365394938}
     m_Modifications:
+    - target: {fileID: 197582, guid: 20db906d2ad89436b91ea43ffb04ba36, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 436042, guid: 20db906d2ad89436b91ea43ffb04ba36, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2182,14 +2210,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  anim: {fileID: 0}
-  rb: {fileID: 0}
+  anim: {fileID: 1377668557}
+  rb: {fileID: 1377668559}
   attackRange: 6
   player: {fileID: 1755344546}
   <Bullet>k__BackingField: {fileID: 115806, guid: 40466c5ac40024bbca1e4b144cdf43c2, type: 3}
   <BulletSpawnPoint>k__BackingField: {fileID: 593190543}
   <BulletSpawnTime>k__BackingField: 1.5
   <BulletTimer>k__BackingField: 0
+--- !u!95 &1377668557 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9555892, guid: c07db661138134f589f46b8510d57c9a, type: 3}
+  m_PrefabInstance: {fileID: 1798490023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1377668559 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5023672, guid: c07db661138134f589f46b8510d57c9a, type: 3}
+  m_PrefabInstance: {fileID: 1798490023}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1377668561 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 448308, guid: c07db661138134f589f46b8510d57c9a, type: 3}
@@ -2203,6 +2241,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 365394938}
     m_Modifications:
+    - target: {fileID: 105180, guid: 9438be3cda5b74d7c81901b9e0d831a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 449836, guid: 9438be3cda5b74d7c81901b9e0d831a1, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2600,7 +2642,7 @@ GameObject:
   m_Layer: 0
   m_Name: AntMovePointB
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2613,11 +2655,11 @@ Transform:
   m_GameObject: {fileID: 1755344537}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5, y: -0.15999997, z: 0.06448651}
+  m_LocalPosition: {x: -1.97, y: 1.19, z: 0.06448651}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 174693719}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1755344546
 MonoBehaviour:
@@ -2635,7 +2677,7 @@ MonoBehaviour:
   anim: {fileID: 1755344550}
   rb: {fileID: 1755344551}
   <Bullet>k__BackingField: {fileID: 182108, guid: a5638a192258f4059b0e074542d33fbc, type: 3}
-  <BulletSpawnPoint>k__BackingField: {fileID: 1755344553}
+  <BulletSpawnPoint>k__BackingField: {fileID: 568540172}
   <BulletSpawnTime>k__BackingField: 0
   <BulletTimer>k__BackingField: 0
 --- !u!95 &1755344550 stripped
@@ -2824,6 +2866,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 165882, guid: 6dde6029886a24408b05eced6b5964a6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 485146, guid: 6dde6029886a24408b05eced6b5964a6, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2863,7 +2909,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 124882, guid: 6dde6029886a24408b05eced6b5964a6, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 485146, guid: 6dde6029886a24408b05eced6b5964a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 568540172}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 174212, guid: 6dde6029886a24408b05eced6b5964a6, type: 3}
       insertIndex: -1
@@ -2901,7 +2950,7 @@ GameObject:
   m_Layer: 0
   m_Name: AntMovePointA
   m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2914,11 +2963,11 @@ Transform:
   m_GameObject: {fileID: 1910724706}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5699999, y: -0.14999998, z: 0.06448651}
+  m_LocalPosition: {x: -5.04, y: 1.2, z: 0.06448651}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 174693719}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1930985504
 PrefabInstance:
@@ -3426,3 +3475,5 @@ SceneRoots:
   - {fileID: 1798490023}
   - {fileID: 341433136}
   - {fileID: 1647577276}
+  - {fileID: 1910724707}
+  - {fileID: 1755344538}
