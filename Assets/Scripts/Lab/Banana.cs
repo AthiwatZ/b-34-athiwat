@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class Banana : Weapon
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] float speed;
+    private void Start()
     {
-        
+        Damage = 10;
+        speed = 4.0f * GetShootDirection();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Move()
     {
-        
+        float newX = transform.position.x + speed * Time.deltaTime;
+        float newY = transform.position.y;
+        Vector2 newPosition = new Vector2(newX, newY);
+        transform.position = newPosition;
     }
+    void FixedUpdate()
+    {
+        Move();
+    }
+    public override void OnHitWith(Character character)
+    {
+        if (character is Enemy)
+        {
+            character.TakeDamage(this.Damage);
+        }
+    }
+
 }

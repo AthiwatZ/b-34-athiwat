@@ -11,7 +11,13 @@ public class Crocodile : Enemy , IShootable
     [field: SerializeField] public GameObject Bullet {  get; set; }
     [field: SerializeField] public Transform BulletSpawnPoint { get; set; }
     [field: SerializeField] public float BulletSpawnTime { get; set; }
-    [field: SerializeField] public float BulletTimer { get; set; } 
+    [field: SerializeField] public float BulletTimer { get; set; }
+
+    private void Start()
+    {
+        
+    }
+
     private void Update()
     {
         BulletTimer -= Time.deltaTime;
@@ -39,7 +45,9 @@ public class Crocodile : Enemy , IShootable
         if (BulletTimer <= 0)
         {
             anim.SetTrigger("Shoot");
-            Instantiate(Bullet, BulletSpawnPoint.position, Quaternion.identity);
+            GameObject obj = Instantiate(Bullet, BulletSpawnPoint.position, Quaternion.identity);
+            Rock rock = obj.GetComponent<Rock>();
+            rock.Init(20, this);
         }
         
     }

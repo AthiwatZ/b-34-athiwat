@@ -22,7 +22,7 @@ public abstract class Weapon : MonoBehaviour
 
     public int GetShootDirection()
     {
-        float shootDir = shooter.BulletSpawnPoint.position.x - shooter.BulletSpawnPoint.position.x;
+        float shootDir = shooter.BulletSpawnPoint.position.x - shooter.BulletSpawnPoint.parent.position.x;
         if (shootDir > 0)
         {
             return 1;
