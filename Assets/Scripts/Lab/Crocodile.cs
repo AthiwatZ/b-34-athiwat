@@ -38,6 +38,7 @@ public class Crocodile : Enemy , IShootable
     {
         if (BulletTimer <= 0)
         {
+            anim.SetTrigger("Shoot");
             Instantiate(Bullet, BulletSpawnPoint.position, Quaternion.identity);
         }
         
